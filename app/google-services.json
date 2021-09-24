@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "1083604959054",
+    "firebase_url": "https://e-rickshaw-automation-default-rtdb.firebaseio.com",
+    "project_id": "e-rickshaw-automation",
+    "storage_bucket": "e-rickshaw-automation.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1083604959054:android:e74c2c23f593816e35a81f",
+        "android_client_info": {
+          "package_name": "com.example.e_rikshawbookingautomation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1083604959054-6c41357lnjjc5dkpi0h99ukuorsujdkv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.e_rikshawbookingautomation",
+            "certificate_hash": "0f7d222335ae15eead8bf5855d5e1c4aa8fab0e2"
+          }
+        },
+        {
+          "client_id": "1083604959054-mteg2orffv3thi8n7tgp4qpuke84pfta.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAo9MTximVw1toXT8t8DZ-cIfmvcAUbhvU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1083604959054-43th3co7arldu77mb1r6qb9jj57f6jc1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1083604959054:android:c3a233e6e860172735a81f",
+        "android_client_info": {
+          "package_name": "com.example.e_rikshawowner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1083604959054-n2tgpn2k9vv7lr6m8j6pbg1hpn4id23e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.e_rikshawowner",
+            "certificate_hash": "0f7d222335ae15eead8bf5855d5e1c4aa8fab0e2"
+          }
+        },
+        {
+          "client_id": "1083604959054-mteg2orffv3thi8n7tgp4qpuke84pfta.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAo9MTximVw1toXT8t8DZ-cIfmvcAUbhvU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1083604959054-43th3co7arldu77mb1r6qb9jj57f6jc1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
