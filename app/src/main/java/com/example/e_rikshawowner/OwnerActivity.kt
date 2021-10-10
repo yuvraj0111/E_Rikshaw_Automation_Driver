@@ -1,6 +1,8 @@
 package com.example.e_rikshawowner
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -25,12 +27,47 @@ class OwnerActivity : AppCompatActivity() {
     private lateinit var firebaseAuth: FirebaseAuth
     lateinit var mGoogleSignInClient: GoogleSignInClient
     private lateinit var simpleDialog: Dialog
+    private lateinit var sharedpref: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_owner)
         setSupportActionBar(findViewById(R.id.action_bar))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+
+        sharedpref=this?.getPreferences(Context.MODE_PRIVATE)?:return
+        val isLogin=sharedpref.getString("Email","1")
+
+        if(isLogin=="1")
+        {
+            val sharedEmail=intent.getStringExtra("Email")
+
+            if(sharedEmail!=null)
+            {
+                action()
+                with(sharedpref.edit())
+                {
+                    putString("Email", sharedEmail)
+                    apply()
+                }
+            }
+
+            else
+            {
+                val intent=Intent(this,MainActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+        }
+        else
+        {
+            action()
+        }
+
+    }
+
+    private fun action() {
         binding= DataBindingUtil.setContentView(this,R.layout.activity_owner)
         simpleDialog= Dialog(this)
         firebaseAuth= FirebaseAuth.getInstance()
@@ -84,6 +121,7 @@ class OwnerActivity : AppCompatActivity() {
             {
                 R.id.logout ->
                 {
+                    sharedpref.edit().remove("Email").apply()
                     simpleDialog.simpleloading()
                     val email = getIntent().extras?.getString("Email")
                     mGoogleSignInClient.signOut()
@@ -98,7 +136,7 @@ class OwnerActivity : AppCompatActivity() {
         }
 
         binding.enterLocationOnGoogleMapsButton.setOnClickListener {
-                val intent=Intent(this,MapsActivity::class.java)
+            val intent=Intent(this,MapsActivity::class.java)
             startActivity(intent)
         }
 
