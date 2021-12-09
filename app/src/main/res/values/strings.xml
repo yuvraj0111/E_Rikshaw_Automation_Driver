@@ -10,7 +10,7 @@
 
     <!--Start Fragment -->
     <string name="login">Login</string>
-    <string name="welcome">Welcome</string>
+    <string name="welcome">CabOk</string>
     <string name="please_login_to_proceed">Please Login to Proceed</string>
     <string name="email_edit_text_hint">Email Address</string>
     <string name="password_edit_text_hint">Password</string>
